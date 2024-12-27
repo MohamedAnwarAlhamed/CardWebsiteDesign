@@ -1,0 +1,70 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+:root {
+    --main-color: #1B756B;
+    --black: #334;
+    --white: #fff;
+    --light-bg: #D7FCE7;
+    --light-color: #666;
+    --light-white: rgba(255, 255, 255, .3);
+    --bg-color: #eee;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --border: .1rem solid rgba(0, 0, 0, .2);
+
+}
+
+* {
+    font-family: "Nunito", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: 2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 8rem;
+}
+
+body {
+    height: 500rem;
+}
+
+ ::-webkit-scrollbar {
+    width: 5rem;
+} 
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+section {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 3rem 2rem;
+}
+
+.partners .box-container {
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 16rem);
+    gap: 2.5rem;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.partners .box-container .box{
+    width: 100%;
+}
