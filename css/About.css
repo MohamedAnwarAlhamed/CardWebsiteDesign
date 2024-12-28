@@ -1,0 +1,237 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+:root {
+    --main-color: #1B756B;
+    --black: #334;
+    --white: #fff;
+    --light-bg: #D7FCE7;
+    --light-color: #666;
+    --light-white: rgba(255, 255, 255, .3);
+    --bg-color: #eee;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --border: .1rem solid rgba(0, 0, 0, .2);
+
+}
+
+* {
+    font-family: "Nunito", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: 2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 8rem;
+}
+
+body {
+    height: 500rem;
+}
+
+/* ::-webkit-scrollbar {
+    width: 5rem;
+} */
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+section {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 3rem 2rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    color: var(--white);
+    background-color: var(--main-color);
+    border-radius: 5rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    z-index: -1;
+    background-color: var(--black);
+    border-radius: 5rem;
+    transition: 2s linear;
+}
+
+.btn:hover:before {
+    left: 0;
+    width: 100%;
+}
+
+.btn i {
+    margin-left: .5rem;
+}
+
+.btn:hover i {
+    margin-left: 1rem;
+}
+
+.heading {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+.about .heading {
+    text-align: left;
+}
+
+.about .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+    position: relative;
+    z-index: 1;
+}
+
+.about .row .image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    border-radius: .5rem;
+    background: linear-gradient(125deg, var(--light-bg), var(--main-color));
+    z-index: -1;
+    transition: 2s linear;
+}
+
+.about .row .image:hover::before {
+    transform: translateX(20%) rotate(90deg);
+    width: 60%;
+}
+
+.about .row .image img {
+    width: 100%;
+}
+
+.about .row .image:hover img {
+    transform: scale(.8);
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+}
+
+.about .row .content h3 {
+    font-size: 4rem;
+    color: var(--black);
+    margin-bottom: .5rem;
+}
+
+.about .row .content h3 span {
+    color: var(--main-color);
+}
+
+.about .row .content p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: var(--light-color);
+    padding: .5rem 0;
+}
+
+.about .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.about .box-container .box {
+    flex: 1 1 20rem;
+}
+.about .box-container .box .info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about .box-container .box .info img {
+    height: 5rem;
+}
+
+.about .box-container .box .info h3 {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.about .box-container .box p {
+    color: var(--light-color);
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+.btn-2 {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: var(--main-color);
+}
+
+.btn-2 i {
+    margin-left: .5rem;
+}
+
+.btn-2:hover i {
+    margin-left: 1rem;
+}
+
+@media (max-width: 1280px) {
+    html {
+        font-size: 55%;
+        scroll-padding-top: 6.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about .row .content h3 {
+        font-size: 2.5rem;
+    }
+
+    .about .row .content p {
+        font-size: 1.6rem;
+    }
+
+}
