@@ -1,0 +1,249 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+:root {
+    --main-color: #1B756B;
+    --black: #334;
+    --white: #fff;
+    --light-bg: #D7FCE7;
+    --light-color: #666;
+    --light-white: rgba(255, 255, 255, .3);
+    --bg-color: #eee;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --border: .1rem solid rgba(0, 0, 0, .2);
+
+}
+
+* {
+    font-family: "Nunito", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: 2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 8rem;
+}
+
+body {
+    height: 500rem;
+}
+
+/* ::-webkit-scrollbar {
+    width: 5rem;
+} */
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+section {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 3rem 2rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    color: var(--white);
+    background-color: var(--main-color);
+    border-radius: 5rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    z-index: -1;
+    background-color: var(--black);
+    border-radius: 5rem;
+    transition: 2s linear;
+}
+
+.btn:hover:before {
+    left: 0;
+    width: 100%;
+}
+
+.btn i {
+    margin-left: .5rem;
+}
+
+.btn:hover i {
+    margin-left: 1rem;
+}
+
+.btn-2 {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: var(--main-color);
+}
+
+.btn-2 i {
+    margin-left: .5rem;
+}
+
+.btn-2:hover i {
+    margin-left: 1rem;
+}
+
+.heading {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+.reviews {
+    background: url('../images/review-bg.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.reviews .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.reviews .row .content {
+    flex: 1 1 40rem;
+}
+
+.reviews .row .content h3 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.reviews .row .content p {
+    line-height: 1.8;
+    font-size: 1.8rem;
+    color: var(--bg-color);
+}
+
+.reviews .row .slider-container {
+    flex: 1 1 40rem;
+}
+
+.reviews .row .slider-container .slide {
+    padding: 2rem 2.5rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    user-select: none;
+    display: none;
+}
+
+.reviews .row .slider-container .slide.active{
+    display: inline-block;
+    animation: slide .4s ease-out backwards;
+}
+
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        scale: .5;
+    }
+}
+
+.reviews .row .slider-container .slide p {
+    line-height: 1.8;
+    font-size: 1.8rem;
+    color: var(--light-color);
+    animation: slide .4s .2s ease-out backwards;
+}
+
+.reviews .row .slider-container .slide .user {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: var(--border);
+    animation: slide .4s .4s ease-out backwards;
+}
+
+.reviews .row .slider-container .slide .user img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviews .row .slider-container .slide h3{
+    font-size: 1.8rem;
+    color: var(--black);
+    margin-bottom: .2rem;
+}
+
+.reviews .row .slider-container .slide .stars i {
+    color: var(--main-color);
+    font-size: 1.6rem;
+}
+
+.reviews .row .slider-container .slide .fa-quote-right {
+    margin-left: auto;
+    font-size: 5rem;
+    color: var(--light-color);
+}
+
+.reviews .row .slider-container .controls {
+    margin-top: 2.5rem;
+    text-align: center;
+    user-select: none;
+}
+
+.reviews .row .slider-container .controls div {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin: 0 1.5rem;
+    cursor: pointer;
+}
+
+.reviews .row .slider-container .controls div:hover {
+    color: var(--light-white);
+}
+
+@media (max-width: 1280px) {
+    html {
+        font-size: 55%;
+        scroll-padding-top: 6.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+  
+
+}
